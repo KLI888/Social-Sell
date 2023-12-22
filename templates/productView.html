@@ -1,0 +1,86 @@
+
+{% extends 'base.html' %}
+
+{% block title %}DIGISOCIAL | Product-View{% endblock title %}
+
+{% block body %}
+<main class="">
+    <section class="sec-product">
+        <div class="product-heading">
+            <p>Home/20k- 50k Accounts/PlayGames (27.8 k Followers)</p>
+        </div>
+        <div class="product-content">
+            <div class="product-info1">
+                <div class="product-small-img">
+                    <img src="/{{instaAcc.ac_pic_one}}" alt="" onclick="myFunc(this)">
+                    <img src="/{{instaAcc.ac_pic_two}}" alt="" onclick="myFunc(this)">
+                    <img src="/{{instaAcc.ac_pic_three}}" alt="" onclick="myFunc(this)">
+                </div>
+                <div class="img-container">
+                    <img id="fullImg" src="/{{instaAcc.ac_pic_one}}" alt="">
+                </div>
+            </div>
+            <div class="product-info2">
+                <h1>{{instaAcc.ac_name}} ({{instaAcc.ac_followers}}k Followers)</h1>
+                <span>${{instaAcc.ac_price}}</span>
+                <p>{{instaAcc.ac_info}}</p>
+                <p>This account is labeled as “Semi-Authentic” by our verification team.</p>
+                <p>Buy Now or Make an Offer! Please contact support@digisocial.com for the details.</p>
+                <button id="rzp-button1">BUY NOW</button>
+                
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+    var options = {
+        "key": "rzp_test_9lw7Jx2IwLs2eY", // Enter the Key ID generated from the Dashboard
+        "amount": "{{payment.amount}}", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+        "currency": "INR",
+        "name": "Digisocial",
+        "description": "Buy Account",
+        "image": "https://example.com/your_logo",
+        "order_id": "{{payment.razor_pay_order_id}}", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+
+        "handler": function (response){
+            // window.location.href = "http://127.0.0.1:8000/productViewPage/kriss_88__/success/?razorpay_payment_id=${response.razorpay_payment_id}&razorpay_order_id=${response.razorpay_order_id}&razorpay_signature=${response.razorpay_signature}"
+
+            window.location.href = "http://127.0.0.1:8000/success/?order_id={{payment.id}}"
+
+            alert('Payment Successfully')
+
+            // alert(response.razorpay_payment_id);
+            // alert(response.razorpay_order_id);
+            // alert(response.razorpay_signature);
+        },
+        "theme": {
+            "color": "#3399cc"
+        }
+    };
+    var rzp1 = new Razorpay(options);
+    rzp1.on('payment.failed', function (response){
+            alert(response.error.code);
+            alert(response.error.description);
+            alert(response.error.source);
+            alert(response.error.step);
+            alert(response.error.reason);
+            alert(response.error.metadata.order_id);
+            alert(response.error.metadata.payment_id);
+    });
+    document.getElementById('rzp-button1').onclick = function(e){
+        rzp1.open();
+        e.preventDefault();
+    }
+    </script>
+
+
+
+<script>
+    function myFunc(smallImg) {
+        var fullImg = document.getElementById("fullImg");
+        fullImg.src = smallImg.src
+    }
+</script>
+{% endblock body %}

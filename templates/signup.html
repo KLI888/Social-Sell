@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+{% block title %}DIGISOCIAL | Register{% endblock title %}
+
+{% block body %}
+<main class="">
+  <section class="sec-signup">
+      <div class="signup-form">
+          <h1>Signup</h1>
+          <form method="post">
+            {% csrf_token %}
+              <div class="txt-field">
+                  <input type="text" name='username' required>
+                  <span></span>
+                  <label for="">Username</label>
+              </div>
+              <div class="txt-field">
+                  <input type="email" name='email' required>
+                  <span></span>
+                  <label for="">Email</label>
+              </div>
+              <div class="txt-field">
+                  <input type="password" name='password' required>
+                  <span></span>
+                  <label for="">Password</label>
+              </div>
+              <input type="submit" value="Signup">
+              <div class="signup-link">
+                  Not a member? <a href="/loginPage">Login</a>
+              </div>
+          </form>
+      </div>
+  </section>
+</main>
+{% endblock body %}
+
+

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}DIGISOCIAL | Contact{% endblock title %}
+
+
+{% block body %}
+<main>
+    <section class="sec-contact">
+        <div class="contact-content">
+            <div class="contact-info1">
+                <h1>CONTACT US</h1>
+                <p>Please contact us if you have any questions. we will get back to you within 24hrs.</p>
+            </div>
+            <div class="contact-info2">
+                <img src="/static/images/contact.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="sec-conForm">
+        <div class="conForm-content">
+            <div class="conForm-info1">
+                <h1>Have a <span>Question</span>?</h1>
+                <p>Do not hesitate to contact us, if you have any questions!</p>
+                <p>Address:<br>
+                    1014 -7191 Yonge St, Toronto.<br>
+                    ON L3T0C4, Canada.</p>
+                <p>Hours of Operation:<br>
+                    9 am to 6 pm EST<br>
+                    Monday to Saturday</p>
+                <p>General enquiries: <br>
+                    <a href="mailto:support@socialtradia.com">support@socialtradia.com</a>
+                </p>
+            </div>
+            <div class="conForm-info2">
+                <form action="">
+                    <p>Your Name (required)<br>
+                        <span><input type="text"></span>
+                    <p>Your Email (required)<br>
+                        <span><input type="email"></span>
+                    </p>
+                    <p>Your Message<br>
+                        <span><textarea name="your-message" cols="40"
+                            rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span>
+                    </p>
+                    <p><input type="submit" value="Submit" class="conSubmit"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock body %}

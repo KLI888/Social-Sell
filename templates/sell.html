@@ -1,0 +1,326 @@
+{% extends 'base.html' %}
+
+{% block title %}DIGISOCIAL | Product-View{% endblock title %}
+
+{% block body %}
+<main>
+  <section class="sec-sellA">
+    <div class="sell-content">
+      <div class="sell-form">
+        <div class="container">
+          <header>Instagram Information</header>
+          <div class="progress-bar">
+            <div class="step">
+              <p>
+                Info
+              </p>
+              <div class="bullet">
+                <!-- <span>1</span> -->
+              </div>
+              <div class="check fas fa-check"></div>
+            </div>
+            <div class="step">
+              <p>
+                Engage
+              </p>
+              <div class="bullet">
+                <span>2</span>
+              </div>
+              <div class="check fas fa-check"></div>
+            </div>
+            <div class="step">
+              <p>
+                Contact
+              </p>
+              <div class="bullet">
+                <span>3</span>
+              </div>
+              <div class="check fas fa-check"></div>
+            </div>
+          </div>
+          <div class="form-outer">
+            <form method="post">
+              {% csrf_token %}
+              <div class="page slide-page">
+                <div class="title">
+                  Basic Info:
+                </div>
+                <div class="field">
+                  <div class="label">
+                    Account Name
+                  </div>
+                  <input type="text" name="ac_name">
+                </div>
+                <div class="field">
+                  <div class="label">
+                    Account Category
+                  </div>
+                  <select name="ac_category">
+                    {% for category in category %}
+                    <option>{{category.category_name}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+                <div class="field">
+                  <button class="firstNext next">Next</button>
+                </div>
+              </div>
+              <div class="page">
+                <div class="title">
+                  Account Engagement:
+                </div>
+                <div class="field">
+                  <div class="label">
+                    Number of Followers
+                  </div>
+                  <input type="text" name="ac_followers">
+                </div>
+                <div class="field">
+                  <div class="label">
+                    Account Age
+                  </div>
+                  <input type="Number" name="ac_age">
+                </div>
+                <div class="field btns">
+                  <button class="prev-1 prev">Previous</button>
+                  <button class="next-1 next">Next</button>
+                </div>
+              </div>
+              <div class="page">
+                <div class="title">
+                  Date of Birth:
+                </div>
+                <div class="field">
+                  <div class="label">
+                    Full Name
+                  </div>
+                  <input type="text" name="ac_fullname">
+                </div>
+                <div class="field">
+                  <div class="label">
+                    Email
+                  </div>
+                  <input type="email" name="ac_email">
+                </div>
+                <div class="field btns">
+                  <button class="prev-2 prev">Previous</button>
+                  <button type="submit" class="next-2 next">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="sell-info">
+        <div class="sell-info-content">
+          <h1>Sell Instagram Accounts - Made Simple</h1>
+          <span>Via Social Tradia</span>
+          <p class="sell-wp">Selling Instagram Accounts Just Got Easier! <span>FREE listing for accounts!</span></p>
+
+          <p>We know how to sell Instagram accounts. Please fill out this form and your Instagram account will be
+            added
+            as a listing to our seller platform. Our team will present the Instagram account to the potential clients
+            interested in buying and get back to you as soon as we receive an offer on our platform to buy the
+            Instagram
+            account. Social Tradia provides you the best infrastructure to sell your Instagram account in no time.</p>
+
+          <p>Also, it doesn’t matter where you or your audience are located since we have many forms of payment
+            methods
+            to buy Instagram accounts. Social Tradia will go above and beyond to make sure the payment transaction is
+            smooth and you receive the money for the sale of your Instagram account with the best conversion rate and
+            maximum speed. We only need the general information for your Instagram account at this point in time.</p>
+
+          <p>This seller information includes Name, Number of Followers, Number of Likes, Age, Your Email.</p>
+          <p class="sell-tags">#EASY #SAFE # SECURE #QUICK #YouGrowWeSell #DIGISOCIAL</p>
+          <img src="/static/images/sell-insta-1.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sec-whySell">
+    <div class="whySell-content">
+      <div class="whySell-info1">
+        <h1>Why Sell Instagram Account?</h1>
+        <p>Considering many factors, every Instagram account has access to wide audience and a noticeable number of followers and potentially can be monetized to make money on a regular basis.</p>
+        <h3>Instagram Accounts Have Real Value</h3>
+        <p>If you have a property, you can rent it out but you can sell it as well and our platform helps you with selling your Instagram account.</p>
+        <p>At Social Tradia, we deal with net values for buying accounts from sellers, and our team strongly believes that if we can’t sell Instagram accounts, then no one can.</p>
+        <p>Your Instagram account is a valuable asset and we have mastered the art of selling it securely over the years, so that you can focus on growing Instagram accounts creating a wider audience, and increasing your number of followers on the platform while we do the dirty work for you.</p>
+        <h3>Selling Instagram Accounts With Social Tradia</h3>
+        <p>Social Tradia is a platform that only communicates the best Instagram accounts offers from actually-interested buyers from around the world since we know how valuable your time is.</p>
+        <p>Our trusted account sellers love us because we bring negotiation, promotion, and above all maximum security to the table.</p>
+        <p>Proudly, more than 10,000 Instagram accounts got sold via Social Tradia and this number is growing rapidly.</p>
+        <p>When it comes to the payment to buy an Instagram account, it doesn’t matter where you are located on planet earth since we will pick the best payment method for you to receive the money in no time from the Instagram account sale transaction, combined with the finest conversion rate possible.</p>
+      </div>
+      <div class="whySell-info2">
+        <h1>Why Should You Choose Us to Sell Your Instagram Account?</h1>
+        <p>Just like you need an expert to help you sell your business, you need an expert to sell Instagram accounts too and Social Tradia is your expert platform. Here are the reasons why you need us to sell your Instagram account through Social Tradia.</p>
+        <p>We help you get in touch with genuine Instagram account buyers so that you don’t have to worry about a thing. We know that your time is valuable, so it’s our mission to make the transaction to buy Instagram accounts as simple as possible.</p>
+        <p>If you are an IG influencer with a large audience and lots of followers (above 1 Million), don’t worry! We know how to handle big seller transactions and that’s what our platfrom is made for.</p>
+        <p>Buying accounts is made easy for both the seller and buyer. You get your payment through a secure gateway as soon as the sale is confirmed. We used whatever payment method you can imagine during our time.</p>
+        <p>We get you the best offers from the marketplace and make sure that you get the best price for your Instagram account listing.</p>
+        <p>The ease of process lets us handle everything on your part so you can perform other functions while leaving the entire work to our platform.</p>
+        <p>No matter where you are located in the world, there is an audience lookiing to <a href="#">buy Instagram account</a> out there, and we will find them for you. Basically, you will experience maximum exposure (Online & Offline) for your account sale.</p>
+        <p>We have sellers who make a decent living out of selling Instagram accounts back to back as a business and you can sell your own Instagram account too.</p>
+      </div>
+    </div>
+  </section>
+  <section class="sec-howSell">
+    <h1>How To Sell Instagram Accounts on Social Tradia?</h1>
+    <div class="howSell-content">
+      <div class="howSell-info1">
+        <p>Just a few steps on our platform and your Instagram account is sold to a buyer. Yes, it is that simple with Social Tradia. As a seller, all you have to do is follow these steps;</p>
+        <p>1. Just click on the “Sell Tab” and list your Instagram account for sale.</p>
+        <p>2. Our team will verify your Instagram account and in case of any need, we will contact you via email. It is an imperative proce</p>
+        <p>3. Your account must pass the verification stage and then only we will start working on it. Once passed, our business team will start its offline promotion of the listing. Simply, we will approach our clients via email who are interested in buying and are looking for an Instagram account for sale in the same niche.</p>
+        <p>4. As soon as an account buyer makes a reasonable offer, we communicate with you and if you accept it, the deal finalizes and you need to hand over the credentials in 24 hours.</p>
+        <p>5. As and when the Instagram buyer makes the payment, our team takes over your Instagram account and sends you the payment.</p>
+
+        <h3>Payment Process for Instagram Buyers and Sellers</h3>
+        <p>It’s a simple 20 minutes process where you are informed prior to its starting. As for the sale fee, you don’t have to worry about it as it is paid by the account buyer, 10% of the transaction amount. The payments after we sell Instagram accounts on our platform are always made through a secure gateway.</p>
+
+        <h3>More Than One Instagram Account for Sale?</h3>
+        <p>If you have more than one Instagram account to sell, you can join our “Trusted Sellers Club” after selling your first Instagram account on our platform.</p>
+      </div>
+      <div class="howSell-info2">
+        <img src="/static/images/sell-Instgaram-account.png" alt="">
+        <h3>Selling Your Instagram Account Made Easy</h3>
+        <p>One thing that Social Tradia promises you is the best price for your Instagram account and that too without lifting a single finger</p>
+        <p>As a seller, experience is what you need to make such business deals and Social Tradia holds it in ample quantity. Selling your Instagram account was never such a simple process but it has been made so by Social Tradia. The transparency in our work when both buying and selling, and our dedication to our trusted sellers is what sets us apart from any other business service that sells Instagram accounts.</p>
+        
+      </div>
+    </div>
+  </section>
+  <section class="home-form">
+    <div class="form-dhome">
+      <div class="feedback-form">
+        <h1>Customer Feedback & Reviews</h1>
+        <p>We are proud of our outstanding service when it comes to selling Instagram accounts. Only don't take our word, see our clients experience with us.</p>
+        <div class="feed-form">
+          <form>
+            <div class="feed-img">
+              <img src="images/review.svg" alt="">
+              <p>Submit Your Review</p>
+            </div>
+            <div class="form-inputs">
+              <div class="inputBox">
+                <input type="text" name="" required="required">
+                <span>Full Name</span>
+              </div>
+              <div class="inputBox">
+                <input type="email" name="" required="required">
+                <span>Email</span>
+              </div>
+              <div class="inputBox">
+                <textarea required="required"></textarea>
+                <span>Type your Message...</span>
+              </div>
+              <div class="inputBox">
+                <input type="submit" value="Send">
+              </div>
+            </div>
+        </form>
+        </div>
+      </div>
+      <div class="feedback-info">
+        <div class="feeduser-icon">
+          <i class="ri-account-circle-fill"></i>
+          <p><span>★★★★★</span></p>
+        </div>
+        <p>I bought instgaram account for my bisness from these guys, they answered all of my concers, it took like 3 days but good experience...”<br>
+          - Stefano</p>
+          <div class="feeduser-icon">
+            <i class="ri-account-circle-fill"></i>
+            <p><span>★★★★★</span></p>
+          </div>
+        <p>I originally heard about socialtradia from a friend of mine over a year ago. Last week when I decided I was ready to sell my own account, I immediately went to socialtradia. I received a solid offer on my account within a week and decided to move through with it. Everything went smoothly, and Ana always responded to my emails promptly. I received payment for my account about 12 hours after the takeover. I'd definitely recommend using socialtradia as they have great service and it's secure for both buyers and sellers.”<br>
+          - Calvin s.</p>
+        <div class="feeduser-icon">
+          <i class="ri-account-circle-fill"></i>
+          <p><span>★★★★★</span></p>
+        </div>
+        <p>It was a good experience for me. The process was very positive. Socialtradia is a very reliable company. I am excited to work with them again. My rating is 5 stars for this reason.”<br>
+          - Marco J</p>
+        <div class="feeduser-icon">
+          <i class="ri-account-circle-fill"></i>
+          <p><span>★★★★★</span></p>
+        </div>
+        <p>Was a great experience with this platform. I sold my first account at a very good price and i received my payment on time,everything was done perfectly and manager was really supportive . If you want to sell or buy Instagram I recommend SocialTradia is absolutely safe.”<br>
+            - Kinjik E.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const slidePage = document.querySelector(".slide-page");
+const nextBtnFirst = document.querySelector(".firstNext");
+const prevBtnSec = document.querySelector(".prev-1");
+const nextBtnSec = document.querySelector(".next-1");
+const prevBtnThird = document.querySelector(".prev-2");
+const submitBtn = document.querySelector(".next-2");
+// const prevBtnFourth = document.querySelector(".prev-3");
+// const submitBtn = document.querySelector(".submit");
+const progressText = document.querySelectorAll(".step p");
+const progressCheck = document.querySelectorAll(".step .check");
+const bullet = document.querySelectorAll(".step .bullet");
+let current = 1;
+
+nextBtnFirst.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "-25%";
+  bullet[current - 1].classList.add("active");
+  progressCheck[current - 1].classList.add("active");
+  progressText[current - 1].classList.add("active");
+  current += 1;
+});
+nextBtnSec.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "-50%";
+  bullet[current - 1].classList.add("active");
+  progressCheck[current - 1].classList.add("active");
+  progressText[current - 1].classList.add("active");
+  current += 1;
+});
+
+submitBtn.addEventListener("click", function(){
+//   bullet[current - 1].classList.add("active");
+//   progressCheck[current - 1].classList.add("active");
+//   progressText[current - 1].classList.add("active");
+  current += 1;
+  setTimeout(function(){
+    alert("Your Form Successfully Signed up");
+    location.reload();
+  },800);
+});
+
+prevBtnSec.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "0%";
+  bullet[current - 2].classList.remove("active");
+  progressCheck[current - 2].classList.remove("active");
+  progressText[current - 2].classList.remove("active");
+  current -= 1;
+});
+prevBtnThird.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "-25%";
+  bullet[current - 2].classList.remove("active");
+  progressCheck[current - 2].classList.remove("active");
+  progressText[current - 2].classList.remove("active");
+  current -= 1;
+});
+prevBtnFourth.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "-50%";
+  bullet[current - 2].classList.remove("active");
+  progressCheck[current - 2].classList.remove("active");
+  progressText[current - 2].classList.remove("active");
+  current -= 1;
+});
+
+</script>
+{% endblock body %}
+
+
+

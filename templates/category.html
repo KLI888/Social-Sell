@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+
+{% block title %}DIGISOCIAL | Category{% endblock title %}
+
+
+{% block body %}
+<main class="">
+  <section class="category-info">
+    <div class="cate-info">
+      <p>Instagram accounts for sale - not just followers!</p>
+      <h1>Find the Instagra account <span>for sale</span></h1>
+      <p>Social Tradia is the best market-place to find your new Instagram account.</p>
+    </div>
+  </section>
+  <section class="sec-category">
+    <div class="category-list">
+      {% for category in categorys %}
+      <a href="/categoryType/{{category.id}}">
+      <div class="category">
+        <img src="/{{category.category_img}}" alt="">
+        <p>{{category.category_name}} <span>Accounts</span></p>
+      </div>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  <section class="sec-started">
+    <h1>How to get started</h1>
+    <div class="how-started">
+      <div class="how-cards">
+        <div class="howcard">
+          <img src="/static/images/Pay-anywhere.svg" alt="">
+          <div class="howcard-info">
+            <h1>Make an offer</h1>
+            <p>Is there any Instagram account for sale that you might be interested in? If yes, pull the trigger and
+              make an offer to buy the Instagram account.</p>
+          </div>
+        </div>
+        <div class="howcard">
+          <img src="/static/images/Quick-process.svg" alt="">
+          <div class="howcard-info">
+            <h1>Make an offer</h1>
+            <p>Is there any Instagram account for sale that you might be interested in? If yes, pull the trigger and
+              make an offer to buy the Instagram account.</p>
+          </div>
+        </div>
+        <div class="howcard">
+          <img src="/static/images/Support.svg" alt="">
+          <div class="howcard-info">
+            <h1>Make an offer</h1>
+            <p>Is there any Instagram account for sale that you might be interested in? If yes, pull the trigger and
+              make an offer to buy the Instagram account.</p>
+          </div>
+        </div>
+      </div>
+      <div class="how-info">
+        <p>If you are looking for the right place that has the best Instagram accounts for sale, search no more!
+          Social Tradia is the top marketplace platform for buying and selling Instagram accounts and you can surf
+          through hundreds of Instagram accounts to buy or sell now.</p><br>
+        <p>Thousands of business owners and marketing agencies have put their trust in us and our service to buy
+          authentic Instagram accounts with a high volume of real followers. Social Tradia offers many unique features
+          such as in-depth niche classification and a vast variety of categories for Instagram accounts. Also, we
+          guarantee that every Instagram account is being checked and verified by our team, before coming to the
+          market for sale on our platform.</p><br>
+        <p>When you want to go through the process of an Instagram account to buy with us through our platform, as a
+          seller you will have no worries regarding the security of your purchase of the account, and you are only
+          presented with authentic Instagram accounts and real followers.</p><br>
+        <p>We make it easy for both parties of the transaction, buyer and seller, and if there are any questions
+          before or after the purchase of the Instagram account for sale, you have our complete support and secure
+          service.</p><br>
+      </div>
+    </div>
+  </section>
+  <section class="sec-whyuse">
+    <div class="whyuse">
+      <div class="whyuse-img">
+        <img src="/static/images/pngwing.com.png" alt="">
+      </div>
+      <div class="whyuse-info">
+        <h1>Why use Social Tradia?</h1>
+
+        <p>Not every business can rise up to the challenge of creating the right platform that understands and
+          executes what needs to be done in the world of Instagram accounts for sale in social media. By choosing us,
+          you are entering into one of the biggest pools of Instagram accounts.</p><br>
+
+        <h4>Factors to consider before you sell or buy Instagram accounts:</h4>
+
+        <p><span>Secure transaction: </span>when it comes to buying an Instagram account, no one does it better than
+          us in respect to security.Instagram account sellers will never face a chargeback on our platform, and this
+          is something we strongly stand for — secure service for every buyer and seller. It might sound easy but
+          using the right payment methods, thresholds, and processes to buy an account took us years of experiments
+          with trial and error. The same goes for safeguarding the Instagram account buyers against any potential
+          restoration; and excellence in this field definitely separates our business from everyone else.</p><br>
+
+        <p><span>Quick transaction process: </span>when you decide to buy an Instagram account for sale, your
+          transaction will be done in 1 to 3 business days, yes, that fast! After receiving the payment from the
+          buyers, we take over the Instagram accounts from the sellers, and then we will send the payment immediately
+          to the sellers of the Instagram accounts. As the last step, credentials get sent to the account buyers via
+          email and as a part of the delivery routine, the contract/ID is needed. We make sure that this happens soon
+          enough, which is best for both buyers and sellers.</p><br>
+
+        <p><span>Live Chat Support: </span>if you have hesitations, or any questions, in any part of your process to
+          buy an Instagram account for sale, you don’t have to wait to get the answers to your questions. We have got
+          your back with our live chat support. We are at reach seven days a week for both buyers and sellers
+          (Internal live chat on Sundays for users who are in the middle of a transaction).</p><br>
+
+        <p><span>Strong filters: </span>Not every Instagram account gets to be in our cart, only the ones with real
+          Instagram followers and authentic engagements. So, authenticity is the condition to sell Instagram pages
+          with us.</p><br>
+
+        <p><span>It works both ways: </span>if you have real Instagram followers, this is the place for you to sell
+          Instagram accounts. We receive numerous requests from around the globe to purchase any Instagram accounts
+          for sale in every possible niche. Here, we facilitate all sorts of classification, negotiation, and
+          promotion on the platform for free and only take a small fee after selling your Instagram account.</p><br>
+
+        <p><span>Flexibility: </span>As a buyer, you are free to choose whatever Instagram account you want, and we
+          take care of the negotiation and transaction. Once it is over, you will receive the invoice for the
+          Instagram account, and signing a contract for your purchase comes after that. If the transfer doesn’t get
+          completed within 5 days of the payment, we promise a 100% return of your money. Here you can browse the real
+          and legitimate Instagram accounts for sales in the current market and if you see the word “authentic” for an
+          Instagram account listing, take our word for it.</p>
+      </div>
+
+    </div>
+  </section>
+</main>
+{% endblock body %}
+
+

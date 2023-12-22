@@ -1,0 +1,2808 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --bg-color: #222327;
+    --text-color: #fff;
+    --main-color: #00b575;
+
+}
+
+body {
+    min-height: 100vh;
+    /* background: var(--bg-color); */
+    color: var(--text-color);
+    /* background-color: #d3d3d3; */
+}
+
+p {
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    background: #efeded;
+}
+
+/* navigationbar */
+nav {
+    background: var(--bg-color);
+    /* position: fixed; */
+    width: 100%;
+    top: 0;
+    right: 100%;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background: transparent; */
+    padding: 28px 12%;
+    transition: all .50s ease;
+    overflow: hidden;
+    z-index: 10000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo i {
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 3px;
+}
+
+.logo span {
+    color: var(--text-color);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.navigationbar {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.navigationbar a {
+    color: var(--text-color);
+    font-size: 1vw;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0 30px;
+    transition: all .50 ease;
+    text-decoration: none;
+}
+
+.navigationbar a:hover {
+    color: var(--main-color);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+.main a {
+    margin-right: 25px;
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all .50 ease;
+    text-decoration: none;
+}
+
+.main a:hover {
+    color: var(--main-color);
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user i {
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 7px;
+}
+
+#menu-icon {
+    font-size: 35px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+
+@media (max-width: 1400px) {
+    nav {
+        padding: 14px 2%;
+        transition: .2s;
+    }
+
+    .navigationbar a {
+        padding: 5px 0;
+        margin: 0px 20px;
+
+    }
+}
+
+@media (max-width: 1100px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navigationbar {
+        position: absolute;
+        top: -30%;
+        right: -100%;
+        width: 270px;
+        height: 29vh;
+        background: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+        overflow: hidden;
+    }
+
+    .navigationbar a {
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+        transition: all .50s ease;
+    }
+
+    .navigationbar a:hover {
+        color: var(--text-color);
+        transform: translateY(5px);
+    }
+
+    .navigationbar.open {
+        right: 30%;
+        top: 5%;
+    }
+}
+
+@media (max-width: 470px) {
+    .logo span {
+        font-size: .9rem;
+    }
+    .logo i,
+    .user i{
+        font-size: 1.4rem;
+    }
+    .main a {
+        margin-left: 0px;
+        font-size: .9rem;
+    }
+    #menu-icon {
+        font-size: 25px;
+    }
+    .navigationbar.open {
+        width: 200px;
+        height: 35vh;
+        right: 15%;
+        top: 10%;
+    }
+    .navigationbar a {
+        margin: 8px 0;
+        padding: 0px 20px;
+    }
+}
+
+
+/* Crousel */
+
+.carousel-item {
+    height: 32rem;
+    background: #777;
+    color: var(--text-color);
+    position: relative;
+}
+
+.carousel-item .container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 50px;
+}
+
+.sec-find-ac .info {
+    margin: 50px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* height: 30vh; */
+}
+
+.sec-find-ac p{
+    font-size: 1.8rem;
+}
+.sec-find-ac .container-fluid p{
+    margin-right: 100px;
+}
+.info-heading {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+    padding: 60px 0 0 0;
+}
+
+.info-heading h1 i {
+    color: gray;
+    font-size: 25px;
+}
+
+.info-heading .info-active a {
+    color: black;
+}
+
+.info-heading h1 a {
+    font-size: 25px;
+    color: var(--main-color);
+    font-weight: 700;
+}
+
+.info-heading h1 a.info-active {
+    color: #000;
+}
+
+.info-heading a {
+    text-decoration: none;
+}
+
+.info .info-text {
+    padding: 40px 100px;
+}
+
+.info .info-text p {
+    color: grey;
+    font-size: 20px;
+}
+
+/* instagram card new */
+
+/* insta card */
+.insta-card .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.insta-card .wrapper .incard {
+    position: relative;
+    width: 325px;
+    height: 450px;
+    background: #000;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    cursor: pointer;
+}
+
+.insta-card .poster {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.insta-card .poster::before {
+    content: '';
+    position: absolute;
+    bottom: -45%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: .3s;
+}
+
+.insta-card .wrapper .incard:hover .poster::before {
+    bottom: 0;
+}
+
+.insta-card .poster img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s;
+}
+
+.insta-card .wrapper .incard:hover .poster img {
+    transform: scale(1.1);
+}
+
+.insta-card .details {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 1.5em 1.5em 2em;
+    background: #000a;
+    backdrop-filter: blur(16px) saturate(120%);
+    transition: .3s;
+    color: #fff;
+    z-index: 2;
+}
+
+.insta-card .incard:hover .details {
+    bottom: 0;
+}
+
+.insta-card .details h1,
+.insta-card .details h2 {
+    font-weight: 700;
+}
+
+.insta-card .details h1 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.insta-card .details h2 {
+    font-weight: 400;
+    font-size: 1em;
+    margin-bottom: 10px;
+    opacity: .6;
+}
+
+.insta-card .details .rating {
+    position: relative;
+    margin-bottom: 15px;
+    display: flex;
+    gap: .25em;
+}
+
+.insta-card .details .rating i {
+    color: #e3c414;
+}
+
+.insta-card .details .rating span {
+    margin-left: 0.25em;
+}
+
+.insta-card .details .tags {
+    display: flex;
+    gap: .375em;
+    margin-bottom: .875em;
+    font-size: .85em;
+}
+
+.insta-card .details .tags span {
+    padding: .35rem .65rem;
+    color: #fff;
+    border: 1.5px solid rgba(255 255 255 / 0.4);
+    border-radius: 4px;
+    border-radius: 50px;
+}
+
+.insta-card .details .desc {
+    color: #fff;
+    opacity: .8;
+    line-height: 1.5;
+    margin-bottom: 1em;
+}
+
+.details .cast h3 {
+    margin-bottom: .5em;
+}
+
+.details .cast ul {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    width: 100%;
+}
+
+.details .cast ul li {
+    list-style: none;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1.5px solid #fff;
+}
+
+.details .cast ul li img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.insta-card {
+    margin-bottom: 100px;
+}
+
+.insta-card .insta-card-info {
+    padding: 50px;
+}
+
+.insta-card .card-heading {
+    color: var(--main-color);
+}
+
+
+/* old card  */
+/* .insta-card {
+    margin-bottom: 100px;
+}
+
+.insta-card .insta-card-info {
+    padding: 50px;
+}
+
+.insta-card .insta-card-info h1 {
+    color: var(--main-color);
+}
+
+.insta-card .acc-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.acc-cards .acard {
+    cursor: pointer;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 20px 15px;
+}
+
+.acc-cards .acard img {
+    width: 250px;
+    height: 250px;
+}
+
+.acc-cards .acard h1 {
+    margin: 10px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.acc-cards .acard p {
+    font-size: 18px;
+    margin-bottom: 0;
+    color: black;
+}
+
+.acc-cards .acard p span {
+    color: var(--main-color);
+} */
+
+.why-buy {
+    overflow: hidden;
+}
+
+.why-buy .why-content1,
+.why-content2 {
+    padding: 100px 150px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.why-buy .why-main {
+    width: 700px;
+    margin-right: 50px;
+}
+
+.why-buy .why-main .why-heading h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+}
+
+.why-buy .why-main .why-text {
+    color: grey;
+    font-size: 14px;
+}
+
+.why-buy .why-img img {
+    width: 600px;
+    /* height: 7%; */
+}
+
+.home-form {
+    /* width: 100%; */
+}
+
+.home-form .form-dhome {
+    padding: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    /* width: 100%; */
+}
+
+.form-dhome .feedback-form {
+    width: 25%;
+}
+
+.form-dhome .feedback-form h1 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.form-dhome .feedback-form p {
+    text-align: justify;
+    color: grey;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.form-dhome .feed-form {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-dhome .feed-form form {
+    padding: 30px;
+}
+
+.form-dhome .feed-form .feed-img {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.feed-form .feed-img img {
+    display: block;
+    width: 70px;
+    margin-right: 20px;
+}
+
+.feed-form .feed-img p {
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: #000;
+    margin-bottom: 0;
+}
+
+.feed-form .form-inputs .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.form-inputs .inputBox input,
+.form-inputs .inputBox textarea {
+    width: 100%;
+    height: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.form-inputs .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 14px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.form-inputs .inputBox input:focus~span,
+.form-inputs .inputBox input:valid~span,
+.form-inputs .inputBox textarea:focus~span,
+.form-inputs .inputBox textarea:valid~span {
+    color: #e91e63;
+    font-size: 18px;
+    transform: translateY(-30px);
+}
+
+.form-inputs .inputBox input[type="submit"] {
+    background-color: #333745;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.form-dhome .feedback-info {
+    width: 70%;
+    color: black;
+}
+
+.form-dhome .feedback-info p {
+    text-align: justify;
+    color: black;
+}
+
+.feedback-info .feeduser-icon {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.feedback-info .feeduser-icon i {
+    font-size: 40px;
+    font-weight: 600;
+    color: rgba(99, 99, 111, .4);
+}
+
+.feedback-info .feeduser-icon p {
+    margin-bottom: 0;
+}
+
+.feedback-info .feeduser-icon span {
+    color: var(--main-color);
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+.footer {
+    background-color: #24262b;
+    padding: 70px 0;
+}
+
+.footer-container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.footer .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer .footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul {
+    padding-left: 0;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    text-decoration: none;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #2426b2;
+    background-color: #fff;
+}
+
+/* Footer responsive */
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 50%;
+    }
+}
+
+
+/* Category page */
+
+
+.category-info,
+.sec-sellA {
+    background-color: var(--bg-color);
+}
+
+.category-info .cate-info {
+    /* padding-left: 150px;
+    padding-top: 50px; */
+    padding: 50px 0 50px 150px;
+}
+
+.category-info .cate-info p:not(:last-child) {
+    font-size: 14px;
+    border-radius: 50px;
+    padding: 8px;
+    background-color: #37383f;
+    color: grey;
+    margin-bottom: 0;
+    width: 352px;
+}
+
+.category-info .cate-info h1 {
+    margin: 15px 0;
+    color: var(--main-color);
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.category-info .cate-info span {
+    color: var(--text-color);
+    font-weight: 200;
+}
+
+.category-info .cate-info p {
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.sec-category {
+    padding: 100px 50px;
+}
+
+.sec-category .category-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.sec-category .category-list .category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 350px;
+    border-radius: 20px;
+    background-color: white;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.sec-category .category-list .category:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.category-list .category img {
+    width: 166px;
+    border-radius: 20px 0 0 20px;
+}
+
+.category-list .category p {
+    padding: 20px 20px 10px 15px;
+    margin-right: 20px;
+    font-size: 17px;
+    color: black;
+}
+
+.category-list .category span {
+    font-weight: 200;
+}
+
+.sec-started h1 {
+    padding-left: 200px;
+    font-weight: 600;
+    font-size: 2rem;
+    color: black;
+}
+
+.sec-started {
+    margin-top: 50px;
+}
+
+.sec-started .how-started {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 200px;
+    gap: 50px;
+    width: 100%;
+}
+
+.how-started .how-cards {
+    width: 35%;
+}
+
+.how-started .how-cards .howcard {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 30px;
+    margin-bottom: 20px;
+    gap: 20px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.how-started .how-cards .howcard:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.how-cards .howcard img {
+    width: 100px;
+}
+
+.how-cards .howcard .howcard-info h1 {
+    font-size: 20px;
+    font-weight: 600;
+    padding-left: 0;
+}
+
+.how-cards .howcard .howcard-info p {
+    font-size: 18px;
+    font-weight: 300;
+    color: grey;
+}
+
+.how-started .how-info {
+    width: 55%;
+}
+
+.how-started .how-info p {
+    font-size: 22px;
+    color: grey;
+    font-weight: 300;
+}
+
+
+.sec-whyuse {
+    width: 100%;
+}
+
+.sec-whyuse .whyuse {
+    padding: 100px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.sec-whyuse .whyuse .whyuse-img {
+    width: 40%;
+}
+
+.sec-whyuse .whyuse .whyuse-img img {
+    width: 750px;
+}
+
+.sec-whyuse .whyuse h1 {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.sec-whyuse .whyuse h4 {
+    font-weight: 300;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.sec-whyuse .whyuse p:not(:nth-last-child()) {
+    color: #777777;
+    font-weight: 100;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.sec-whyuse .whyuse p span {
+    color: black;
+    font-weight: 600;
+}
+
+
+
+
+.sec-sellA {
+    width: 100%;
+    border-radius: 0 0 150px 150px;
+}
+
+.sell-form {
+    width: 45%;
+}
+
+.sell-content {
+    padding: 50px 100px 100px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.sell-content .container {
+    width: 370px;
+    height: 545px;
+    background: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 50px 35px 10px 35px;
+}
+
+.container header {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    color: black;
+}
+
+.container .form-outer {
+    width: 100%;
+    overflow: hidden;
+}
+
+.container .form-outer form {
+    display: flex;
+    width: 400%;
+}
+
+.form-outer form .page {
+    width: 25%;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.form-outer form .page .title {
+    text-align: left;
+    font-size: 25px;
+    font-weight: 500;
+    color: black;
+}
+
+.form-outer form .page .field {
+    width: 330px;
+    height: 45px;
+    margin: 45px 0;
+    display: flex;
+    position: relative;
+}
+
+form .page .field .label {
+    position: absolute;
+    top: -30px;
+    font-weight: 500;
+    color: black;
+}
+
+form .page .field input {
+    height: 100%;
+    width: 90%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 18px;
+}
+
+form .page .field select {
+    width: 90%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+form .page .field button {
+    width: 90%;
+    height: calc(100% + 5px);
+    border: none;
+    background: var(--main-color);
+    margin-top: -20px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+}
+
+form .page .field button:hover {
+    background: #000;
+}
+
+form .page .btns button {
+    margin-top: -20px !important;
+}
+
+form .page .btns button.prev {
+    margin-right: 3px;
+    font-size: 17px;
+}
+
+form .page .btns button.next {
+    margin-left: 3px;
+}
+
+.container .progress-bar {
+    display: flex;
+    margin: 40px 0;
+    user-select: none;
+    flex-direction: row;
+}
+
+.container .progress-bar .step {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.container .progress-bar .step p {
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.progress-bar .step .bullet {
+    height: 25px;
+    width: 25px;
+    border: 2px solid #000;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.2s;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.progress-bar .step .bullet.active {
+    /* border-color: #d43f8d; */
+    border-color: var(--main-color);
+    background: var(--main-color);
+}
+
+.progress-bar .step .bullet span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.progress-bar .step .bullet.active span {
+    display: none;
+}
+
+/* .progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after {
+    position: absolute;
+    content: '';
+    bottom: 11px;
+    right: -86px;
+    height: 3px;
+    width: 84px;
+    background: #262626;
+} */
+
+.progress-bar .step .bullet.active:after {
+    background: var(--main-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 0.3s linear forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after {
+    display: none;
+}
+
+.progress-bar .step p.active {
+    color: var(--main-color);
+    transition: 0.2s linear;
+}
+
+.progress-bar .step .check {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.progress-bar .step .check.active {
+    display: block;
+    color: #fff;
+}
+
+.sell-info {
+    width: 45%;
+    color: #fff;
+}
+
+.sell-info .sell-info-content h1 {
+    color: var(--main-color);
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.sell-info .sell-info-content span {
+    color: grey;
+}
+
+.sell-info .sell-info-content .sell-wp {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.sell-info .sell-info-content .sell-wp span {
+    color: var(--main-color);
+}
+
+.sell-info .sell-info-content p {
+    font-size: 12px;
+    font-weight: 100;
+    text-align: justify;
+}
+
+.sell-info .sell-info-content .sell-tags {
+    color: var(--main-color);
+    font-size: 10px;
+    margin-top: 20px;
+}
+
+.sell-info .sell-info-content img {
+    width: 70%;
+}
+
+.sec-whySell {
+    width: 100%;
+    margin-top: 150px;
+}
+
+.sec-whySell .whySell-content {
+    width: 100%;
+    padding: 0 80px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 50px;
+}
+
+.sec-whySell .whySell-content .whySell-info1 {
+    width: 38%;
+}
+
+.whySell-content .whySell-info1 h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: black;
+}
+
+.whySell-content .whySell-info1 h4 {
+    font-size: 1.3rem;
+    font-weight: 100;
+}
+
+.whySell-content .whySell-info1 p {
+    color: grey;
+    font-size: 18px;
+    font-weight: 100;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.sec-whySell .whySell-content .whySell-info2 {
+    width: 38%;
+}
+
+.whySell-content .whySell-info2 h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: black;
+}
+.whySell-content .whySell-info1 h3 {
+    color: black;
+}
+
+.whySell-content .whySell-info2 p {
+    color: grey;
+    font-size: 18px;
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+
+.whySell-content .whySell-info2 p a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+
+.sec-howSell {
+    width: 100%;
+    color: black;
+}
+
+.sec-howSell h1 {
+    margin-top: 100px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: black;
+}
+
+.sec-howSell .howSell-content {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    padding: 50px 100px 0px 100px;
+    gap: 30px;
+}
+
+.sec-howSell .howSell-content .howSell-info1 {
+    width: 45%;
+    padding: 20px
+}
+
+.howSell-content .howSell-info1 p {
+    color: grey;
+    font-size: 18px;
+    font-weight: 100;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.sec-howSell .howSell-content .howSell-info2 {
+    width: 40%;
+}
+
+.howSell-content .howSell-info2 img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.howSell-content .howSell-info2 p {
+    color: grey;
+    font-size: 18px;
+    font-weight: 100;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.howSell-content .howSell-info2 h3 {
+    font-size: 1.7rem;
+    font-weight: 100;
+}
+
+
+
+
+.sec-fast {
+    width: 100%;
+    background-color: var(--bg-color);
+    margin-bottom: 100px;
+}
+
+.sec-fast .fast-content {
+    width: 100%;
+    padding: 100px 100px 20px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
+
+.fast-content .fast-info1 {
+    width: 35%;
+}
+
+.fast-content .fast-info1 h1 {
+    font-size: 2.3rem;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.fast-content .fast-info1 p {
+    font-size: 30px;
+    font-weight: 200;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.fast-content .fast-info1 .fast-imgs {
+    margin-top: 30px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 100px;
+}
+
+.fast-content .fast-info1 .fast-imgs img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.fast-content .fast-info1 .fast-imgs p {
+    font-size: 16px;
+    color: #DAB379;
+}
+
+.fast-content .fast-info2 {
+    width: 30%;
+}
+
+.fast-content .fast-info2 img {
+    position: relative;
+    top: 100px;
+}
+
+.sec-contact {
+    background-color: var(--bg-color);
+    width: 100%;
+}
+
+.sec-contact .contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    padding: 60px 100px 0 100px;
+}
+
+.sec-contact .contact-content .contact-info1,
+.sec-contact .contact-content .contact-info1 {
+    width: 30%;
+}
+
+.contact-content .contact-info1 h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.contact-content .contact-info1 p {
+    width: 400px;
+    font-size: 18px;
+}
+
+.contact-content .contact-info2 img {
+    width: 500px;
+    position: relative;
+    top: 20px;
+    font-size: 18px;
+}
+
+
+.sec-conForm {
+    width: 100%;
+}
+
+.sec-conForm .conForm-content {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 100px;
+    color: black;
+}
+
+.conForm-content .conForm-info1 {
+    width: 35%;
+}
+
+.conForm-content .conForm-info1 h1 {
+    font-size: 2.3rem;
+    font-weight: 100;
+}
+
+.conForm-content .conForm-info1 h1 span {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.conForm-content .conForm-info1 p {
+    font-size: 20px;
+    color: grey;
+    font-weight: 100;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
+
+.conForm-content .conForm-info1 p a {
+    color: var(--main-color);
+    text-decoration: none;
+    padding-top: 20px;
+}
+
+.conForm-content .conForm-info2 form p {
+    padding-bottom: 50px;
+    font-size: 18px;
+}
+
+.conForm-content .conForm-info2 form input,
+.conForm-content .conForm-info2 form textarea {
+    padding-top: 10px;
+    padding: 15px;
+    width: 500px;
+    border: none;
+    color: black;
+    font-weight: 500;
+    padding-top: 20px;
+}
+
+.conForm-content .conForm-info2 form .conSubmit {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.conForm-content .conForm-info2 form .conSubmit:hover {
+    background-color: #54565d;
+}
+
+
+.sec-about {
+    background-image: url("images/about2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+
+.sec-mainAbout {
+    width: 100%;
+}
+
+.sec-mainAbout .mainAbout-content {
+    padding: 100px;
+}
+
+.mainAbout-content .mainAbout-info1 h1 {
+    color: black;
+    font-size: 3rem;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.mainAbout-content .mainAbout-info1 p {
+    color: black;
+    font-size: 16px;
+}
+
+.mainAbout-content .mainAbout-info1 a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.mainAbout-content .mainAbout-info2 {
+    margin-top: 100px;
+    color: black;
+}
+
+.mainAbout-content .mainAbout-info2 h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.mainAbout-content .mainAbout-info2 .corevalues {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+}
+
+.mainAbout-content .mainAbout-info2 .corevalues .corevalues-1 {
+    padding: 30px;
+}
+
+.mainAbout-info2 .corevalues .corevalues-1 img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.mainAbout-info2 .corevalues .corevalues-1 h4 {
+    color: var(--main-color);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.mainAbout-info2 .corevalues .corevalues-1 p {
+    color: black;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+/* Signup and login form page ######################################################################## */
+.sec-signup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-form {
+    margin: 100px;
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    color: black;
+}
+
+.signup-form h1 {
+    text-align: center;
+    padding: 10px 0 20px 0;
+    border-bottom: 1px solid silver;
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.signup-form form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.signup-form form .txt-field {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.signup-form .txt-field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.signup-form .txt-field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.signup-form .txt-field span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #2691d9;
+    transition: .5s;
+}
+
+.signup-form .txt-field input:focus~label,
+.signup-form .txt-field input:valid~label {
+    top: -5px;
+    color: #2691d9;
+}
+
+.signup-form input:focus~span::before,
+.signup-form input:valid~span::before {
+    width: 100%;
+}
+
+.signup-form input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #2691d9;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+.signup-form input[type="submit"]:hover {
+    border-color: #2691d9;
+    transition: .5s;
+}
+
+.signup-form .signup-link {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+
+.signup-form .signup-link a {
+    color: #2691d9;
+    text-decoration: none;
+}
+
+.signup-form .signup-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* Product View page ####################################################################################################### */
+.sec-product {
+    width: 100%;
+    color: black;
+}
+
+.sec-product .product-heading {
+    padding: 10px 200px;
+}
+
+.product-heading p {
+    margin-bottom: 0rem;
+    font-size: 14px;
+    color: grey;
+}
+
+.sec-product .product-content {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 50px 200px;
+}
+
+.product-content .product-info1 {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.product-content .product-small-img img {
+    height: 92px;
+    margin: 10px 0;
+    cursor: pointer;
+    display: block;
+    opacity: .6;
+}
+
+.product-content .product-small-img img:hover {
+    opacity: 1;
+}
+
+.product-content .img-container img {
+    height: 500px;
+    padding: 10px;
+    opacity: 1;
+}
+
+.product-content .product-info2 {
+    width: 30%;
+}
+
+.product-content .product-info2 h1 {
+    font-size: 25px;
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+
+.product-content .product-info2 span {
+    font-size: 18px;
+    font-weight: 200;
+    color: #dc9814;
+    margin-bottom: 20px;
+}
+
+.product-content .product-info2 p {
+    text-align: justify;
+    color: grey;
+    margin-bottom: 20px;
+}
+
+.product-content .product-info2 button {
+    background-color: #282828;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 20px;
+}
+.product-content .product-info2 button:hover{
+    background-color: #373636;
+}
+
+
+
+
+
+/* Mediaquery ####################################################################################### */
+@media (max-width: 1220px) {
+    .info-heading h1 a {
+        font-size: 20px;
+    }
+    .info .info-text p {
+        font-size: 14px;
+    }
+    .info .info-text {
+        padding: 40px 50px;
+    }
+    .insta-card .insta-card-info h1 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .why-buy .why-content1, .why-content2 {
+        padding: 100px 150px;
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .home-form .form-dhome {
+        flex-direction: column;
+    }
+    .form-dhome .feedback-form {
+        width: 80%;
+    }
+    .form-dhome .feedback-info {
+        width: 100%;
+    }
+
+    /* Category page ################################################################ */
+    .sec-category .category-list {
+        gap: 10px;
+    }
+    .sec-category .category-list a{
+        text-decoration: none;
+    }
+    .sec-started .how-started{
+        flex-direction: column;
+    }
+    .how-started .how-cards {
+        width: 90%;
+    }
+    .how-started .how-info {
+        width: 100%;
+    }
+    .how-started .how-info p {
+        font-size: 16px;
+    }
+    .sec-whyuse .whyuse {
+        gap: 50px;
+        flex-direction: column;
+    }
+    .sec-whyuse .whyuse .whyuse-img img {
+        width: 500px;
+    }
+    .sec-whyuse .whyuse h1 {
+        font-size: 26px;
+    }
+    .sec-whyuse .whyuse .whyuse-info p{
+        font-size: 14px;
+    }
+    .sec-whyuse .whyuse h4 {
+        font-size: 18px;
+    }
+
+    /* sell page ################################################################################ */
+    .sell-content {
+        padding: 50px 48px 100px 50px;
+        gap: 10px;
+    }
+    .sell-content .container {
+        width: 370px;
+        padding: 50px 35px 10px 35px;
+    }
+    .sell-form {
+        width: 45%;
+    }
+    .sell-info {
+        width: 45%;
+    }
+    .container header {
+        font-size: 25px;
+        margin: 0 0 20px 0;
+    }
+    /* .progress-bar .step .bullet:before, .progress-bar .step .bullet:after {
+        right: -78px;
+        height: 3px;
+        width: 78px;
+    } */
+    .container .progress-bar .step p {
+        font-size: 16px;
+    }
+    form .page .field input {
+        width: 90%;
+        padding-left: 10px;
+    }
+    form .page .field select {
+        width: 90%;
+        font-size: 16px;
+    }
+    form .page .field button {
+        width: 90%;
+        font-size: 16px;
+    }
+    .sell-info .sell-info-content h1 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .sell-info .sell-info-content .sell-wp {
+        font-size: 16px;
+    }
+    .sell-info .sell-info-content p {
+        font-size: 12px;
+    }
+    .sell-info .sell-info-content .sell-tags {
+        font-size: 10px;
+    }
+    .sell-info .sell-info-content img {
+        width: 70%;
+    }
+    .sec-whySell .whySell-content {
+        padding: 0 30px;
+        gap: 25px;
+    }
+    .sec-whySell .whySell-content .whySell-info1 {
+        width: 45%;
+    }
+    .sec-whySell .whySell-content .whySell-info2 {
+        width: 45%;
+    }
+    .whySell-content .whySell-info1 h1 {
+        font-size: 1.7rem;
+    }
+    .whySell-content .whySell-info1 p {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+    .whySell-content .whySell-info1 h3{
+        font-size: 1.3rem;
+    }
+    .whySell-content .whySell-info2 h1 {
+        font-size: 1.7rem;
+    }
+    .whySell-content .whySell-info2 p {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+    .sec-howSell h1 {
+        margin-top: 60px;
+        font-size: 2rem;
+    }
+    .sec-howSell .howSell-content {
+        padding: 50px 60px 0px 60px;
+        gap: 20px;
+    }
+    .howSell-content .howSell-info1 p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .howSell-content .howSell-info2 img {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+    .howSell-content .howSell-info2 h3 {
+        font-size: 1.3rem;
+        font-weight: 100;
+    }
+    .howSell-content .howSell-info2 p {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    /* Fast delivery page ################################################################## */
+    .sec-fast .fast-content {
+        width: 100%;
+        padding: 45px 0px 20px 0px;
+        gap: 15px;
+    }
+    .fast-content .fast-info1 h1 {
+        font-size: 1.7rem;
+        color: var(--main-color);
+        margin-bottom: 10px;
+    }
+    .fast-content .fast-info1 p {
+        font-size: 20px;
+    }
+    .fast-content .fast-info1 .fast-imgs {
+        gap: 60px;
+    }
+    .fast-content .fast-info1 .fast-imgs img {
+        width: 75px;
+        margin-bottom: 10px;
+    }
+    .fast-content .fast-info1 .fast-imgs p {
+        font-size: 12px;
+    }
+    .fast-content .fast-info2 img {
+        top: 60px;
+        width: 125%;
+    }
+
+
+    /* About us page ########################################################################## */
+    .sec-about {
+        height: 350px;
+    }
+    .mainAbout-content .mainAbout-info1 h1 {
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+    }
+    .mainAbout-info2 .corevalues .corevalues-1 img {
+        width: 100px;
+        margin-bottom: 20px;
+    }
+    .mainAbout-info2 .corevalues .corevalues-1 h4 {
+        font-size: 18px;
+    }
+    .mainAbout-info2 .corevalues .corevalues-1 p {
+        font-size: 14px;
+    }
+
+
+    /* product View page ###################################################################### */
+    .sec-product .product-content {
+        padding: 50px 20px;
+    }
+    .product-content .product-info1 {
+        width: 50%;
+    }
+    .product-content .img-container img {
+        height: 470px;
+    }
+    .product-content .product-small-img img {
+        height: 85px;
+    }
+    .product-content .product-info2 {
+        width: 50%;
+        padding-right: 20px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 0 1.5rem;
+        height: 5rem;
+    }
+    .carousel-inner {
+        position: relative;
+        width: 100%;
+        height: 30rem;
+        overflow: hidden;
+    }
+    .sec-find-ac p{
+        font-size: 18px;
+    }
+    .info-heading {
+        padding: 20px 0 0 0;
+    }
+    .info-heading h1 a {
+        font-size: 12px;
+    }
+    .info .info-text {
+        padding: 15px 20px;
+    }
+    .info .info-text p {
+        font-size: 12px;
+    }
+    .insta-card .insta-card-info {
+        padding: 20px;
+    }
+    .acc-cards .acard {
+        margin: 20px 10px;
+    }
+    .insta-card .insta-card-info h1 {
+        font-size: 25px;
+        font-weight: 600;
+    }
+    .why-buy .why-main {
+        width: 650px;
+        margin-right: 0;
+    }
+    .home-form .form-dhome {
+        padding: 80px;
+    }
+
+    /* product view page ################################################## */
+    .sec-product .product-content {
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 100px;
+        gap: 50px;
+    }
+    .sec-product .product-heading {
+        padding: 10px 30px;
+    }
+    .product-content .img-container img {
+        height: 470px;
+    }
+    .product-content .product-info2 {
+        width: 94%;
+        padding-right: 0px;
+    }
+
+
+    /* About us page ############################################################### */
+    .sec-about {
+        height: 280px;
+    }
+    .sec-mainAbout .mainAbout-content {
+        padding: 50px;
+    }
+    .mainAbout-content .mainAbout-info2 h1 {
+        font-size: 2.3rem;
+    }
+    .mainAbout-info2 .corevalues .corevalues-1 img {
+        width: 85px;
+        margin-bottom: 20px;
+    }
+    .mainAbout-info2 .corevalues .corevalues-1 h4 {
+        font-size: 12px;
+    }
+    .mainAbout-info2 .corevalues .corevalues-1 p {
+        font-size: 7px;
+    }
+
+
+
+    /* Contact us page ############################################################################### */
+    .sec-contact .contact-content {
+        padding: 38px 70px 0 70px;
+    }
+    .contact-content .contact-info1 h1 {
+        font-size: 2.7rem;
+    }
+    .contact-content .contact-info1 p {
+        width: 200px;
+        font-size: 10px;
+        color: white;
+    }
+    .contact-content .contact-info2 img {
+        width: 280px;
+    }
+    .sec-conForm .conForm-content {
+        align-items: center;
+        flex-direction: column;
+        padding: 50px;
+    }
+    .conForm-content .conForm-info1 {
+        width: 80%;
+    }
+    .conForm-content .conForm-info2 {
+        width: 80%;
+    }
+    .conForm-content .conForm-info2 form p {
+        padding-bottom: 10px;
+        font-size: 18px;
+    }
+    .conForm-content .conForm-info2 form input {
+        width: 500px;
+        padding: 20px 10px;
+    }
+
+    /* category page ################################################################ */
+    .sec-category {
+        padding: 100px 30px;
+    }
+    .category-info .cate-info p:not(:last-child) {
+        font-size: 10px;
+        padding: 8px;
+        width: 260px;
+    }
+    .category-info .cate-info {
+        padding: 50px 0 50px 40px;
+    }
+    .category-info .cate-info h1 {
+        margin: 12px 0;
+        font-size: 24px;
+    }
+    .category-info .cate-info p {
+        font-size: 12px;
+    }
+    .sec-category .category-list .category {
+        width: 300px;
+    }
+    .category-list .category img {
+        width: 160px;
+        border-radius: 20px 0 0 20px;
+    }
+    .category-list .category p {
+        padding: 20px 20px 10px 15px;
+        margin-right: 20px;
+        font-size: 12px;
+    }
+    .sec-started .how-started {
+        padding: 50px 50px;
+    }
+    .sec-whyuse .whyuse {
+        padding: 50px;
+    }
+    .sec-whyuse .whyuse .whyuse-img img {
+        width: 400px;
+    }
+
+
+    /* Sell page ############################################################################# */
+    .sell-content {
+        padding: 50px 100px 100px 100px;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .sell-form {
+        width: 90%;
+    }
+    .sell-info {
+        width: 90%;
+    }
+    .sell-content .container {
+        width: 450px;
+    }
+    /* .progress-bar .step .bullet:before, .progress-bar .step .bullet:after {
+        right: -104px;
+        height: 3px;
+        width: 104px;
+    } */
+    .form-outer form .page .field {
+        width: 422px;
+    }
+    form .page .field button {
+        width: 90%;
+    }
+
+
+
+    .whySell-content .whySell-info1 h1 {
+        font-size: 1.3rem;
+    }
+    .whySell-content .whySell-info1 p {
+        font-size: 12px;
+    }
+    .whySell-content .whySell-info1 h3 {
+        font-size: 1rem;
+    }
+    .whySell-content .whySell-info2 h1 {
+        font-size: 1.3rem;
+    }
+    .whySell-content .whySell-info2 p {
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+
+    .sec-howSell h1 {
+        font-size: 1.5rem;
+    }
+    .sec-howSell .howSell-content {
+        padding: 50px 20px 0px 20px;
+    }
+    .sec-howSell .howSell-content .howSell-info1 {
+        width: 45%;
+        padding: 0;
+    }
+    .howSell-content .howSell-info1 p {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    .howSell-content .howSell-info1 h3{
+        font-size: 1rem;
+    }
+    .howSell-content .howSell-info2 h3 {
+        font-size: 1rem;
+    }
+    .howSell-content .howSell-info2 p {
+        font-size: 12px;
+        margin-bottom: 30px;
+    }
+
+
+    /* Fast delivery page ######################################################### */
+    .fast-content .fast-info1 h1 {
+        font-size: 1.3rem;
+    }
+    .fast-content .fast-info1 p {
+        font-size: 15px;
+    }
+    .fast-content .fast-info1 .fast-imgs img {
+        width: 58px;
+    }
+    .fast-content .fast-info1 .fast-imgs p {
+        font-size: 10px;
+    }
+    
+
+}
+
+@media (max-width: 699px){
+    .carousel-inner {
+        height: 20rem;
+    }
+    .info .info-text p {
+        font-size: 10px;
+    }
+    .why-buy .why-img img {
+        width: 530px;
+        /* height: 7%; */
+    }
+    .sec-find-ac .container-fluid p {
+        margin-right: 50px;
+    }
+    .insta-card .insta-card-info h1 {
+        font-size: 20px;
+    }
+    .acc-cards .acard {
+        width: 230px;
+        height: 340px;
+    }
+    .acc-cards .acard img {
+        width: 205px;
+        height: 210px;
+    }
+
+
+    /* Category page #################################################################### */
+    .category-info .cate-info p:not(:last-child) {
+        font-size: 9px;
+        width: 235px;
+    }
+    .category-info .cate-info h1 {
+        margin: 12px 0;
+        font-size: 20px;
+    }
+    .category-info .cate-info p {
+        font-size: 10px;
+    }
+    .sec-category .category-list .category {
+        width: 255px;
+    }
+    .category-list .category img {
+        width: 124px;
+        border-radius: 20px 0 0 20px;
+    }
+    .sec-started .how-started {
+        padding: 50px 30px;
+    }
+
+    /* Fast delivery page ############################################################### */
+    .fast-content .fast-info1 h1 {
+        font-size: 1rem;
+    }
+    .fast-content .fast-info1 p {
+        font-size: 12px;
+    }
+    .fast-content .fast-info1 .fast-imgs {
+        margin-top: 18px;
+    }
+    .fast-content .fast-info1 .fast-imgs img {
+        width: 50px;
+    }
+    .fast-content .fast-info1 .fast-imgs p {
+        font-size: 9px;
+    }
+    .fast-content .fast-info2 img {
+        top: 40px;
+        left: 50px;
+        width: 100%;
+    }
+    .insta-card {
+        margin-bottom: 0;
+    }
+
+
+    /* contact page ########################################################################### */
+    .contact-content .contact-info1 h1 {
+        font-size: 2rem;
+    }
+    .sec-contact {
+        width: 100%;
+        height: 250px;
+    }
+    .contact-content .contact-info2 img {
+        width: 250px;
+    }
+
+    /* product view page ########################################################################## */
+    .sec-product .product-content {
+        padding: 50px 50px;
+    }
+    .product-content .img-container img {
+        height: 50vh;
+    }
+    .product-content .product-small-img img {
+        height: 6vh;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* index page */
+    .info-heading h1 a {
+        display: none;
+    }
+    .info-heading h1 i {
+        font-size: 30px;
+    }
+    .why-buy .why-img img {
+        width: 490px;
+    }
+    .why-buy .why-main {
+        width: 500px;
+    }
+    .home-form .form-dhome {
+        padding: 50px;
+    }
+
+
+    /* about us page #################################################################################### */
+    .sec-about {
+        height: 225px;
+    }
+    .mainAbout-content .mainAbout-info2 .corevalues {
+        flex-direction: column;
+    }
+    .mainAbout-content .mainAbout-info2 .corevalues .corevalues-1 {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .mainAbout-info2 .corevalues .corevalues-1 img {
+        width: 130px;
+        margin-bottom: 20px;
+    }
+    .mainAbout-info2 .corevalues .corevalues-1 h4 {
+        font-size: 18px;
+    }
+    .mainAbout-info2 .corevalues .corevalues-1 p {
+        font-size: 8px;
+    }
+
+
+    /* category page ###################################################################### */
+    .sec-category .category-list .category {
+        width: 225px;
+    }
+    .category-list .category img {
+        width: 133px;
+        border-radius: 20px 0 0 20px;
+    }
+    .category-list .category p {
+        padding: 20px 14px 10px 0px;
+        margin-right: 0;
+        font-size: 8px;
+    }
+    .sec-started h1 {
+        padding-left: 50px;
+    }
+    .how-cards .howcard img {
+        width: 80px;
+    }
+    .how-cards .howcard .howcard-info h1 {
+        font-size: 18px;
+    }
+    .how-cards .howcard .howcard-info p {
+        font-size: 14px;
+    }
+
+    .sec-whyuse .whyuse .whyuse-img img {
+        display: none;
+    }
+    .sec-whyuse .whyuse {
+        padding: 30px;
+    }
+
+    /* contact page ############################################################################ */
+    .contact-content .contact-info2 img {
+        display: none;
+    }
+    .sec-contact .contact-content .contact-info1, .sec-contact .contact-content .contact-info1 {
+        width: 100%;
+    }
+    .contact-content .contact-info1 p {
+        width: 240px;
+        font-size: 10px;
+        color: white;
+    }
+    .sec-contact {
+        height: 180px;
+    }
+    .conForm-content .conForm-info1 h1 {
+        font-size: 1.7rem;
+    }
+    .conForm-content .conForm-info1 p {
+        font-size: 18px;
+        padding-bottom: 15px;
+    }
+
+    .conForm-content .conForm-info2 {
+        width: 80%;
+        margin-top: 50px;
+    }
+    .conForm-content .conForm-info2 form input,
+    .conForm-content .conForm-info2 form textarea {
+        width: 340px;
+        padding: 20px 10px;
+    }
+    .conForm-content .conForm-info2 form input, .conForm-content .conForm-info2 form textarea {
+        width: 340px;
+        padding: 12px 10px;
+    }
+    .conForm-content .conForm-info2 form .conSubmit {
+        font-size: 16px;
+    }
+
+    /* fast delivery page ############################################################### */
+    .sec-fast {
+        width: 100%;
+        height: 207px;
+        background-color: var(--bg-color);
+        margin-bottom: 50px;
+    }
+    .sec-fast .fast-content {
+        padding: 20px 0px 20px 0px;
+    }
+    .fast-content .fast-info2 {
+        width: 30%;
+        display: none;
+    }
+    .fast-content .fast-info1 {
+        width: 50%;
+    }
+    .fast-content .fast-info1 .fast-imgs img {
+        width: 40px;
+    }
+    .fast-content .fast-info1 .fast-imgs {
+        margin-top: 15px;
+    }
+
+    .acc-cards .acard {
+        width: 200px;
+        height: 285px;
+    }
+    .acc-cards .acard img {
+        width: 175px;
+        height: 180px;
+    }
+    .insta-card .insta-card-info h1 {
+        font-size: 18px;
+    }
+    .acc-cards .acard p {
+        font-size: 14px;
+    }
+
+    /* procut view page ############################################################################# */
+    .sec-product .product-content {
+        padding: 50px 30px;
+    }
+    .product-content .img-container img {
+        height: 35vh;
+    }
+    .product-content .product-small-img img {
+        height: 5vh;
+    }
+    .product-heading p {
+        font-size: 2.5vw;
+    }
+
+    .product-content .product-info2 h1 {
+        font-size: 20px;
+    }
+    .product-content .product-info2 span {
+        font-size: 16px;
+    }
+    .product-content .product-info2 p {
+        font-size: 14px;
+    }
+    .product-content .product-info2 a {
+        padding: 12px;
+        font-size: 18px;
+    }
+
+    /* sell page ######################################################################################## */
+    .sec-sellA {
+        width: 100%;
+        border-radius: 0 0 150px 150px;
+    }
+    .sell-content {
+        padding: 50px 20px 100px 20px;
+    }
+    .sell-content .container {
+        width: 70vw;
+        height: 70vh;
+        padding: 20px 20px 10px 20px;
+
+    }
+    .container header {
+        font-size: 4vw;
+        margin: 0 0 15px 0;
+    }
+    .container .progress-bar .step p {
+        font-size: 3vw;
+    }
+    .container .progress-bar {
+        margin: 20px 0;
+    }
+    /* .progress-bar .step .bullet:before, .progress-bar .step .bullet:after {
+        right: -87px;
+        height: 3px;
+        width: 85px;
+    } */
+    .form-outer form .page .title {
+        font-size: 4.5vw;
+    }
+    form .page .field .label {
+        font-size: 3vw;
+    }
+    form .page .field input {
+        width: 62vw;
+        padding-left: 10px;
+    }
+    form .page .field select {
+        width: 62vw;
+        font-size: 16px;
+    }
+    form .page .field button {
+        width: 62vw;
+    }
+
+    .sell-form {
+        width: 80%;
+    }
+
+    .sell-info {
+        width: 80%;
+    }
+
+
+
+    .sec-whySell .whySell-content {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    .sec-whySell .whySell-content .whySell-info1 {
+        width: 100%;
+    }
+    .sec-whySell .whySell-content .whySell-info2 {
+        width: 100%;
+    }
+    .sec-howSell h1 {
+        font-size: 2.5vw;
+        text-align: start;
+        padding-left: 27px;
+    }
+    .sec-howSell .howSell-content {
+        flex-direction: column;
+    }
+    .sec-howSell .howSell-content .howSell-info1 {
+        width: 100%;
+        padding: 0;
+    }
+    .sec-howSell .howSell-content .howSell-info2 {
+        width: 100%;
+    }
+    .howSell-content .howSell-info2 img {
+        width: 92vw;
+        margin-bottom: 15px;
+    }
+    .home-form .form-dhome {
+        padding: 20px 20px 0  20px;
+    }
+    .form-dhome .feedback-info {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 470px){
+    /* index page ####################################################################################### */
+
+    .carousel-inner {
+        height: 28vh;
+    }
+    .display-5 {
+        font-size: 5vw;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+    .sec-find-ac .container-fluid p {
+        margin-right: 0;
+    }
+    .sec-find-ac p {
+        font-size: 14px;
+    }
+    
+    .info .info-text p {
+        font-size: 14px;
+    }
+
+    .acc-cards .acard {
+        width: 39vw;
+        height: 29vh;
+    }
+    .acc-cards .acard img {
+        width: 33vw;
+        height: 17vh;
+    }
+    .insta-card .insta-card-info h1 {
+        font-size: 14px;
+    }
+    .acc-cards .acard p {
+        font-size: 9px;
+    }
+
+    .why-buy .why-img img {
+        width: 80vw;
+    }
+    .why-buy .why-main {
+        width: 90vw;
+    }
+    .why-buy .why-main .why-heading h1 {
+        font-size: 4vw;
+        font-weight: 600;
+    }
+
+
+
+    /* about us page ########################################################################## */
+    .mainAbout-content .mainAbout-info1 h1 {
+        font-size: 2rem;
+        margin-bottom: 50px;
+    }
+
+
+    /* category page ############################################################################### */
+    .category-info .cate-info p:not(:last-child) {
+        font-size: 1.5vw;
+        width: 178px;
+    }
+    .category-info .cate-info h1 {
+        margin: 12px 0;
+        font-size: 3vw;
+    }
+    .category-info .cate-info p {
+        font-size: 1.7vw;
+    }
+    .sec-category .category-list .category {
+        width: 165px;
+    }
+    .category-list .category img {
+        width: 90px;
+        border-radius: 20px 0 0 20px;
+    }
+
+    .sec-started h1 {
+        font-size: 1.7rem;
+    }
+    .how-cards .howcard img {
+        width: 14vw;
+    }
+    .how-cards .howcard .howcard-info h1 {
+        font-size: 4vw;
+    }
+    .how-cards .howcard .howcard-info p {
+        font-size: 2.5vw;
+    }
+
+
+    /* contact us page ######################################################################## */
+    .sec-conForm .conForm-content {
+        padding: 50px 5vw;
+    }
+    .conForm-content .conForm-info2 form input, 
+    .conForm-content .conForm-info2 form textarea {
+        width: 70vw;
+    }
+
+
+    /* sell page ############################################################################### */
+    form .page .field input {
+        width: 60vw;
+    }
+    form .page .field select {
+        width: 60vw;
+    }
+
+    /* login and signup pag e############################################################################ */
+    .signup-form {
+        width: 90vw;
+    }
+}
